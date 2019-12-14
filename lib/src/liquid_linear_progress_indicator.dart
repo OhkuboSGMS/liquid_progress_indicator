@@ -17,6 +17,8 @@ class LiquidLinearProgressIndicator extends ProgressIndicator {
   ///The direction the liquid travels.
   final Axis direction;
 
+  final int second;
+
   LiquidLinearProgressIndicator({
     Key key,
     double value = 0.5,
@@ -27,6 +29,7 @@ class LiquidLinearProgressIndicator extends ProgressIndicator {
     this.borderRadius,
     this.center,
     this.direction = Axis.horizontal,
+    this.second,
   }) : super(
           key: key,
           value: value,
@@ -73,6 +76,7 @@ class _LiquidLinearProgressIndicatorState
               value: widget.value,
               color: widget._getValueColor(context),
               direction: widget.direction,
+              second: widget.second,
             ),
             if (widget.center != null) Center(child: widget.center),
           ],

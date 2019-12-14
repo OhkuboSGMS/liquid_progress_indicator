@@ -19,6 +19,7 @@ class LiquidLinearProgressIndicatorPage extends StatelessWidget {
             child: LiquidLinearProgressIndicator(
               backgroundColor: Colors.black,
               valueColor: AlwaysStoppedAnimation(Colors.red),
+              second: 2,
             ),
           ),
           Container(
@@ -31,6 +32,7 @@ class LiquidLinearProgressIndicatorPage extends StatelessWidget {
               borderColor: Colors.red,
               borderWidth: 5.0,
               direction: Axis.vertical,
+              second: 10,
             ),
           ),
           Container(
@@ -49,7 +51,7 @@ class LiquidLinearProgressIndicatorPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-            ),
+            second: 7,),
           ),
           Container(
             width: double.infinity,
@@ -59,6 +61,7 @@ class LiquidLinearProgressIndicatorPage extends StatelessWidget {
               backgroundColor: Colors.lightGreen,
               valueColor: AlwaysStoppedAnimation(Colors.blueGrey),
               direction: Axis.vertical,
+              second: 10,
             ),
           ),
         ],
@@ -117,7 +120,7 @@ class _AnimatedLiquidLinearProgressIndicatorState
               fontWeight: FontWeight.bold,
             ),
           ),
-        ),
+        second: 11,),
       ),
     );
   }

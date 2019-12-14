@@ -6,12 +6,13 @@ class Wave extends StatefulWidget {
   final double value;
   final Color color;
   final Axis direction;
-
+  final int second;
   const Wave({
     Key key,
     @required this.value,
     @required this.color,
     @required this.direction,
+    @required this.second,
   }) : super(key: key);
 
   @override
@@ -27,7 +28,7 @@ class _WaveState extends State<Wave> with SingleTickerProviderStateMixin {
 
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: widget.second),
     );
     _animationController.repeat();
   }

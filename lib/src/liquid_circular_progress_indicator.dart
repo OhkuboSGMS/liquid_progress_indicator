@@ -19,7 +19,7 @@ class LiquidCircularProgressIndicator extends ProgressIndicator {
 
   ///The direction the liquid travels.
   final Axis direction;
-
+  final int second;
   LiquidCircularProgressIndicator({
     Key key,
     double value = 0.5,
@@ -29,6 +29,7 @@ class LiquidCircularProgressIndicator extends ProgressIndicator {
     this.borderColor,
     this.center,
     this.direction = Axis.vertical,
+  this.second,
   }) : super(
           key: key,
           value: value,
@@ -72,6 +73,7 @@ class _LiquidCircularProgressIndicatorState
               value: widget.value,
               color: widget._getValueColor(context),
               direction: widget.direction,
+              second: widget.second,
             ),
             if (widget.center != null) Center(child: widget.center),
           ],
