@@ -28,6 +28,7 @@ class _WaveState extends State<Wave> with SingleTickerProviderStateMixin {
 
     _animationController = AnimationController(
       vsync: this,
+      value:math.Random.secure().nextDouble(),
       duration: Duration(seconds: widget.second),
     );
     _animationController.repeat();
